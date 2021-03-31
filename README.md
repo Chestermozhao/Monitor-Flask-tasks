@@ -44,13 +44,14 @@ cp env.example .env
 Run develop
 
 ```
-python celery_flask.py
+python celery_flask_demo/celery_flask.py
 ```
 
 ## celery worker
 
 Init celery worker
 ```
+cd celery_flask_demo
 celery -A celery_flask.celery worker --loglevel=INFO
 ```
 
@@ -58,5 +59,6 @@ celery -A celery_flask.celery worker --loglevel=INFO
 
 Configure flower dashboard to monitor redis broker status
 ```
+cd celery_flask_demo
 flower -A celery_flask.celery --broker=redis://localhost:6379/0
 ```
