@@ -26,6 +26,12 @@ source ./venv/bin/activate
 pip install -r requirements.txt
 ```
 
+#### Init git pre-commit
+
+```
+pre-commit install
+```
+
 #### Create .env file
 
 ```shell
